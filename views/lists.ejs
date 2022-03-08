@@ -1,0 +1,41 @@
+<!-- // header including -->
+
+<%- include('header'); -%>
+
+<body>
+    
+   
+
+    <div class="box" id="heading">
+
+        <h1> <%= listTittle %> </h1>
+
+    </div>
+
+    <div class="box">
+        <%for(var i = 0;i < listNIt.length; i++){%>
+            <div class="item">
+                <input type="checkbox">
+
+                    <p> <%= listNIt[i] %> </p>
+            </div>
+
+                <%} %>   
+
+                <form action="/" class="item" method="post">
+
+                    <!-- <label for="ip1">Input 1 : </label> -->
+                    <input type="text" id="ip1" name="inp1" placeholder="Add New Item" autocomplete="off">
+        
+                    <button type="submit" name="list" value="<%= listTittle %>">+</button>
+                </form>
+
+               
+                
+    </div>
+        
+    </body> 
+</body>
+
+
+<%- include('footer'); -%>
